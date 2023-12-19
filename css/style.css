@@ -1,0 +1,129 @@
+*{margin: 0;padding: 0;  }
+html{
+    overflow-x: hidden;
+}
+a{text-decoration: none; color: rgb(255, 255, 255)}
+a:visited{ text-decoration: underline;}
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+    background: #1d1d1da1;
+    color: white;
+    position: fixed;
+    width: 100dvw;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    
+}
+
+header{position: fixed; z-index: 98;}
+section{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+section#banner{
+    position: relative;
+    z-index: 80;
+    padding: 0;
+    h1{
+        position: relative;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: xx-large;
+        z-index: 99;
+        text-align: center;
+        top: 25vh;
+        color: white;
+    }
+}
+
+
+
+.bodies{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+#earth{
+    background-image: url("../planets/earth.gif");
+    width: 400px;
+    height: 400px;
+    animation:earthmotion 30s linear infinite;
+    
+}
+#mars{
+    background-image: url("../planets/mars.gif");
+    width: 30px;
+    height: 30px;
+    animation:mars 10s linear infinite;
+
+}
+#moon{
+    background-image: url("../planets/moon.gif");
+    margin-left: 10vw;
+    width: 10px;
+    height: 10px;
+    animation: moonmotion 40s linear infinite;
+}
+#meteor{
+    background-image: url(../planets/meteor.gif);
+    width: 75px;
+    height: 75px;
+    animation: meteormotion 10s linear infinite
+}
+#star{
+    background-image: url("../planets/solar_systemstar.gif");
+    width: 50px;
+    height: 50px;
+    animation:star 90s linear infinite;
+}
+
+#stars{
+    background: black url("../images/stars.webp") repeat center;
+    display: inline-block;
+    width: 100vw;
+    position: absolute;
+    height: 100dvh;
+    z-index: 81;
+    
+    padding: 0;
+    margin: 0;
+}
+
+
+@keyframes earthmotion{
+    0%  {transform:translate(0px, 0px);}
+    100%{transform:translate(1900px, 400px);}
+}
+
+@keyframes moonmotion{
+    0%{transform: translate(0px, 0px);}
+    90%{transform: translate(2000px, 0px);}
+    100%{transform: scale(5);}
+    0%{transform: scale(10) translate(0px, 0px);}
+}
+
+@keyframes mars{
+    0%  {transform:translate(0px, 0px);}
+    100%{transform:translate(1900px, 400px);}
+}
+@keyframes meteormotion {
+    0%  {transform:translate(-20vw, 0vw);}
+    100% {transform:translate(100vw, 0vw);}
+    
+}
+@keyframes star{
+    0%  {transform:translate(0px, 0px);}
+    100%{transform:translate(1900px, 400px);}
+}
